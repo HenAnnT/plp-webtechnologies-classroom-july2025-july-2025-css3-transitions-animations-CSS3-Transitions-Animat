@@ -1,0 +1,62 @@
+/* ---------- Part 1: CSS Transitions and Animations ---------- */
+
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    transition: color 0.5s ease;
+}
+
+/* Hover effect using transition */
+h1:hover {
+    color: #ff6600;
+}
+
+/* Button styles */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Box styles */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6600;
+    margin: 40px auto;
+    border-radius: 8px;
+    transition: transform 1s ease, background-color 1s ease;
+}
+
+/* Animation keyframes */
+@keyframes spinAndGrow {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+/* This class will be added dynamically by JS */
+.animate {
+    animation: spinAndGrow 2s ease-in-out;
+}
